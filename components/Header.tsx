@@ -22,14 +22,14 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-4 w-full">
-          <div className="w-full">
+        <Link href="/" className="flex items-center gap-4">
+          <div className="h-16 w-auto">
             <Image
               src="/images/homescreen.png"
               alt="FDP Transparency Portal"
-              width={1200}
-              height={200}
-              className="w-full h-auto object-contain"
+              width={200}
+              height={64}
+              className="h-16 w-auto object-contain"
               priority
             />
           </div>
