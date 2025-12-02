@@ -6,62 +6,39 @@ export default function Recommendations() {
   const recommendations = [
     {
       title: 'Improve Internal Financial Reporting Systems',
-      icon: <BarChart3 size={32} className="text-blue-600" />,
-      color: 'from-blue-50 to-blue-100',
-      borderColor: 'border-blue-600',
       items: [
-        'Standardize documentation and reporting formats across all departments',
-        'Adopt centralized digital filing systems for easy access and audit',
-        'Conduct quarterly internal audits to ensure accuracy and compliance',
-        'Implement automated reminders for document preparation deadlines',
+        'Standardize documentation and reporting formats',
+        'Adopt centralized digital filing systems',
+        'Conduct quarterly internal audits',
       ],
     },
     {
       title: 'Capacity-Building for Staff',
-      icon: <Users size={32} className="text-green-600" />,
-      color: 'from-green-50 to-green-100',
-      borderColor: 'border-green-600',
       items: [
-        'Regular training on FDP requirements and compliance expectations',
-        'Workshops on Statement of Receipts and Expenditures (SRE) preparation',
-        'Education on procurement documentation standards',
-        'Training on Commission on Audit (COA) rules and regulations',
+        'Regular training on FDP requirements',
+        'Workshops on SRE preparation, procurement documentation, and COA rules',
       ],
     },
     {
       title: 'Leverage Digital Tools',
-      icon: <Lightbulb size={32} className="text-purple-600" />,
-      color: 'from-purple-50 to-purple-100',
-      borderColor: 'border-purple-600',
       items: [
-        'Use automated reminders and posting systems to ensure timely submissions',
-        'Develop LGU-level dashboards to track compliance progress in real-time',
-        'Integrate with the FDP Portal (FDPP) for seamless document submission',
-        'Implement cloud-based systems for secure document storage and access',
+        'Use automated reminders and posting systems',
+        'Develop LGU-level dashboards to track compliance',
       ],
     },
     {
       title: 'Promote Citizen-Friendly Communication',
-      icon: <MessageSquare size={32} className="text-orange-600" />,
-      color: 'from-orange-50 to-orange-100',
-      borderColor: 'border-orange-600',
       items: [
-        'Convert technical financial reports into easy-to-understand infographics',
-        'Host regular transparency forums for citizen engagement',
-        'Conduct barangay-level postings of key documents and findings',
-        'Create simplified guides for accessing and interpreting financial data',
+        'Convert technical reports into infographics',
+        'Host transparency forums and barangay-level postings',
       ],
     },
     {
       title: 'Replicate Best Practices of High-Performing LGUs',
-      icon: <CheckCircle size={32} className="text-pink-600" />,
-      color: 'from-pink-50 to-pink-100',
-      borderColor: 'border-pink-600',
       items: [
-        'Adopt Calaca City\'s robust economic investment planning strategies',
-        'Follow Batangas City\'s strict compliance calendar and budget execution',
-        'Emulate Tanauan City\'s social development prioritization approach',
-        'Establish peer learning programs between high and low-performing LGUs',
+        'Adopt Calaca’s economic investment planning',
+        'Follow Batangas City’s strict compliance calendar',
+        'Emulate Tanauan’s social development prioritization',
       ],
     },
   ];
@@ -97,23 +74,23 @@ export default function Recommendations() {
 
         {/* Main Recommendations */}
         <div className="space-y-8 mb-16">
-          {recommendations.map((rec, index) => (
-            <div key={index} className={`bg-gradient-to-br ${rec.color} border-l-4 ${rec.borderColor} rounded-lg p-8 shadow-lg`}>
-              <div className="flex items-start gap-4 mb-6">
-                <div className="flex-shrink-0 bg-white rounded-lg p-3">{rec.icon}</div>
-                <h2 className="text-2xl font-bold text-gray-800 pt-1">A. {rec.title}</h2>
-              </div>
+          {recommendations.map((rec, index) => {
+            const letter = String.fromCharCode(65 + index); // A, B, C...
+            return (
+              <div key={index} className="bg-white border-l-4 border-green-600 rounded-lg p-6 shadow">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="text-2xl font-bold text-green-700">{letter}.</div>
+                  <h2 className="text-2xl font-bold text-gray-800">{rec.title}</h2>
+                </div>
 
-              <ul className="space-y-3 ml-16">
-                {rec.items.map((item, idx) => (
-                  <li key={idx} className="flex gap-3 text-gray-700">
-                    <CheckCircle size={20} className="flex-shrink-0 text-green-600 mt-1" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                <ul className="list-disc list-inside text-gray-700 ml-6 space-y-2">
+                  {rec.items.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
 
         {/* Implementation Timeline */}
@@ -218,21 +195,13 @@ export default function Recommendations() {
           </div>
         </section>
 
-        {/* Conclusion */}
+        {/* Moving Forward */}
         <section>
-          <div className="bg-gradient-to-r from-indigo-50 to-indigo-100 border-l-4 border-indigo-600 p-8 rounded-lg">
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">Moving Forward</h2>
-            <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              Implementing these recommendations requires commitment at all levels of LGU leadership and active
-              participation from finance personnel, planners, and community members. The evidence from our study
-              clearly demonstrates that transparency is not merely a legal compliance requirement—it is a practical,
-              powerful tool for improving revenue generation, boosting public confidence, and ensuring responsible
-              spending.
-            </p>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              LGUs that embrace these recommendations will be well-positioned to strengthen their fiscal health,
-              build stronger relationships with their constituents, and contribute to more sustainable long-term
-              development in their communities.
+          <div className="bg-gradient-to-r from-indigo-50 to-indigo-100 border-l-4 border-indigo-600 p-6 rounded-lg">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-gray-800">Moving Forward</h2>
+            <p className="text-gray-700">
+              Implement these recommendations, monitor compliance, and evaluate outcomes regularly to ensure sustained
+              improvements in FDP compliance and fiscal performance.
             </p>
           </div>
         </section>
