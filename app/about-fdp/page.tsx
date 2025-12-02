@@ -3,36 +3,24 @@
 import { CheckCircle } from 'lucide-react';
 
 export default function AboutFDP() {
-  const requiredDocuments = [
-    {
-      category: 'Annual Reports',
-      items: [
-        'Annual Budget Report',
-        '20% Component of the Internal Revenue Allotment Utilization',
-        'Annual Gender and Development Accomplishment Report',
-        'Bid Results on Civil Works, Goods and Services, and Consulting Services',
-        'Annual Procurement Plan or Procurement List',
-        'Local Disaster Risk Reduction and Management Fund Utilization (LDRRMF)',
-        'Statement of Debt Service',
-        'Report of Special Education Fund Utilization',
-        'Supplemental Procurement Plan',
-        'Trust Fund Utilization',
-      ],
-    },
-    {
-      category: 'Quarterly Reports',
-      items: [
-        'Quarterly Statement of Cash Flow',
-        'Statement of Receipts and Expenditures',
-      ],
-    },
-    {
-      category: 'Other Required Documents',
-      items: [
-        'Human Resource Complement',
-        'Unliquidated Cash Advances',
-      ],
-    },
+  const annualReports = [
+    'Annual Budget Report',
+    'Annual Gender and Development Accomplishment Report',
+    'Annual Procurement Plan or Procurement List',
+    'Statement of Debt Service',
+    'Statement of Receipts and Expenditures',
+    'Supplemental Procurement Plan',
+  ];
+
+  const quarterlyReports = [
+    '20% Component of the Internal Revenue Allotment Utilization',
+    'Bid Results on Civil Works, Goods and Services, and Consulting Services',
+    'Local Disaster Risk Reduction and Management Fund Utilization (LDRRMF)',
+    'Quarterly Statement of Cash Flow',
+    'Report of Special Education Fund Utilization',
+    'Trust Fund Utilization',
+    'Human Resource Complement',
+    'Unliquidated Cash Advances',
   ];
 
   const legalBasis = [
@@ -109,20 +97,32 @@ export default function AboutFDP() {
           <p className="text-gray-600 mb-6">
             LGUs must regularly disclose the following documents to ensure transparency:
           </p>
-          <div className="space-y-8">
-            {requiredDocuments.map((section, idx) => (
-              <div key={idx}>
-                <h3 className="text-2xl font-bold text-green-700 mb-4">{section.category}</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {section.items.map((doc, index) => (
-                    <div key={index} className="flex items-start gap-4 bg-white p-4 rounded-lg border border-gray-200">
-                      <CheckCircle className="text-green-600 flex-shrink-0 mt-1" size={20} />
-                      <span className="text-gray-700">{doc}</span>
-                    </div>
-                  ))}
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Annual Reports Column */}
+            <div>
+              <h3 className="text-2xl font-bold text-green-700 mb-4">Annual Reports</h3>
+              <div className="space-y-3">
+                {annualReports.map((doc, index) => (
+                  <div key={index} className="flex items-start gap-4 bg-white p-4 rounded-lg border border-gray-200">
+                    <CheckCircle className="text-green-600 flex-shrink-0 mt-1" size={20} />
+                    <span className="text-gray-700">{doc}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Quarterly Reports Column */}
+            <div>
+              <h3 className="text-2xl font-bold text-green-700 mb-4">Quarterly Reports</h3>
+              <div className="space-y-3">
+                {quarterlyReports.map((doc, index) => (
+                  <div key={index} className="flex items-start gap-4 bg-white p-4 rounded-lg border border-gray-200">
+                    <CheckCircle className="text-green-600 flex-shrink-0 mt-1" size={20} />
+                    <span className="text-gray-700">{doc}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
