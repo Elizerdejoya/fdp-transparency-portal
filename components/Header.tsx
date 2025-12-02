@@ -22,7 +22,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <div className="bg-green-600 text-white px-3 py-1 rounded-lg font-bold text-lg">
+          <div className="bg-blue-600 text-white px-3 py-1 rounded-lg font-bold text-lg">
             FDP
           </div>
           <div className="hidden sm:block">
@@ -37,7 +37,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-gray-700 hover:text-green-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
             >
               {item.label}
             </Link>
@@ -55,14 +55,14 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="lg:hidden bg-green-50 border-t border-green-100">
+        <div className="lg:hidden bg-gray-50 border-t">
           <nav className="flex flex-col p-4 gap-3">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-gray-700 hover:text-green-600 transition-colors py-2 px-3 rounded-lg hover:bg-green-50"
+                className="text-gray-700 hover:text-blue-600 transition-colors py-2 px-3 rounded-lg hover:bg-blue-50"
               >
                 {item.label}
               </Link>

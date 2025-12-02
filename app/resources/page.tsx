@@ -213,13 +213,6 @@ export default function Resources() {
             </details>
           </div>
         </section>
-        {/* Fix for previous placeholder text */}
-        <section className="mt-12">
-          <h2 className="text-2xl font-bold mb-4 text-gray-800">Notes</h2>
-          <p className="text-gray-700">
-            The resources above include the full study report, compliance checklists, data spreadsheets, training materials, and implementation guides. If a download link is missing, please contact the research team via the Feedback page.
-          </p>
-        </section>
       </div>
     </div>
   );

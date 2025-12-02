@@ -69,10 +69,10 @@ export default function Recommendations() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-16 px-4">
+      <section className="bg-gradient-to-r from-green-600 to-green-800 text-white py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold mb-4">📌 Recommendations for Strengthening FDP Compliance</h1>
-          <p className="text-xl text-orange-100">
+          <p className="text-xl text-green-100">
             Practical strategies to enhance fiscal performance and financial management
           </p>
         </div>
