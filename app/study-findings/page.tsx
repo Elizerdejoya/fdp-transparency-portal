@@ -23,25 +23,96 @@ export default function StudyFindings() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 px-4">
+      <section className="bg-gradient-to-r from-green-600 to-green-800 text-white py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-4">📊 Study Findings</h1>
-          <p className="text-xl text-blue-100">
-            Does Transparency Improve Financial Performance?
+          <h1 className="text-5xl font-bold mb-4">📊 Does Transparency Improve Financial Performance?</h1>
+          <p className="text-xl text-green-100">
+            This section presents the key findings of the study through interactive graphs and tables. Visualizations illustrate the trends in financial performance indicators from 2019–2023 and how these relate to FDP compliance rates across Batangas LGUs.
           </p>
         </div>
       </section>
 
       <div className="max-w-7xl mx-auto px-4 py-16">
-        {/* Introduction */}
+        {/* Significant Findings */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-4 text-gray-800">Research Overview</h2>
-          <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
-            <p className="text-gray-700 text-lg leading-relaxed">
-              This section presents the key findings of the study through interactive graphs and tables.
-              Visualizations illustrate the trends in financial performance indicators from 2019–2023 and how
-              these relate to FDP compliance rates across Batangas LGUs.
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">Significant Findings</h2>
+          <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded-lg mb-6">
+            <p className="text-gray-700 leading-relaxed mb-4">
+              LGUs with higher FDP compliance generally demonstrated stronger performance in Locally Sourced Revenue per Capita (LSRPC). This suggests that transparent publication of budgets, financial statements, and procurement documents helped enhance fiscal credibility, encouraged better taxpayer cooperation, and supported improved revenue mobilization efforts. Cities such as Batangas, Calaca, and Tanauan consistently reported both high LSRPC values and complete FDP documentation.
             </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Furthermore, analysis of Batangas LGUs indicates that higher FDP compliance significantly increases Total Expenditure per Capita (TEPC), suggesting that transparent disclosure of documents promotes more accountable and efficient fiscal management. LGUs with stronger compliance tend to allocate more resources per resident, reflecting better expenditure planning and public service delivery. These findings align with prior studies emphasizing that transparency frameworks and digital disclosure tools enhance financial performance by supporting evidence-based budgeting and effective resource utilization.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              Another notable finding is the widening gap between component cities and municipalities. Cities demonstrated stronger performance in revenue and economic spending indicators, driven by larger economies and greater administrative capacity. However, several municipalities with high compliance—such as San Jose or Bauan—performed competitively, demonstrating that transparency helps mitigate resource constraints.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg p-6 mb-6">
+            <h3 className="font-bold text-lg mb-3 text-gray-800">Overview</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Overall FDP compliance in Batangas improved across the five years, especially after the introduction of enhanced digital posting through FDPP v2 and v3. LGUs became more familiar with online submission processes, leading to fewer missing documents and higher posting consistency.
+            </p>
+          </div>
+        </section>
+
+        {/* Other Relevant Findings */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">Other Relevant Findings</h2>
+
+          {/* Revenue Indicators */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-bold mb-3">1. Revenue Indicators</h3>
+            <div className="bg-white rounded-lg p-6">
+              <p className="text-gray-700 leading-relaxed mb-3">
+                Expansion of Fiscal Autonomy — LSRPC showed a modest recovery in 2022 (16.70%) and rose sharply in 2023 (19.93%), the highest during the five-year period. Despite this growth, most LGUs remain heavily dependent on external transfers, especially the IRA/NTA. Findings show that LGUs in Batangas continue to have limited, yet expanding fiscal autonomy, as less than one-fifth of their total revenues are generated locally.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Dependence on National Transfers (IRA/NTA) — RRTTLR was consistently high, showing that most LGU revenues come from stable, recurring sources like IRA/NTA and local taxes. RRTTLR increased significantly during the pandemic years, peaking in 2022 at 82.20%, before slightly declining to 80.04% in 2023.
+              </p>
+            </div>
+          </div>
+
+          {/* Expenditure Indicators */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-bold mb-3">2. Expenditure Indicators</h3>
+            <div className="bg-white rounded-lg p-6">
+              <p className="text-gray-700 leading-relaxed mb-3">
+                Prudent Debt Management — Low DSER values show strong debt sustainability and conservative financial behavior, although outliers indicate unequal fiscal capacity. The persistently low DSER indicates strong fiscal discipline, limited reliance on loans, and a preference for pay-as-you-go financing.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-3">
+                Underinvestment in Social Development — SER trends reveal that social sectors consistently receive limited financial priority, which may hinder long-term human capital outcomes. Batangas LGUs invest considerably less in social sectors—far below the national LGU average of 21% for social services.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Declining Economic Investment — The downward EER trend signals decreasing budgetary emphasis on growth-oriented programs. The average EER is below the national benchmark, suggesting LGUs devote less than recommended levels to growth-driven expenditures.
+              </p>
+            </div>
+          </div>
+
+          {/* Debt & Investment Capacity */}
+          <div className="mb-8">
+            <h3 className="text-2xl font-bold mb-3">3. Debt and Investment Capacity Indicators</h3>
+            <div className="bg-white rounded-lg p-6">
+              <p className="text-gray-700 leading-relaxed mb-3">
+                Reliable repayment ability — DSR values remained consistently above 1 across all years, indicating that LGUs generated more than enough regular income to cover annual debt obligations. The five-year overall mean was 2.53, showing strong repayment capacity even during pandemic years.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Low risk of debt repayment difficulty — GOSDSR values were consistently high across all five years, with a five-year overall mean of 5.28. This reinforces that LGUs continued to generate operating surpluses far exceeding their annual debt service requirements.
+              </p>
+            </div>
+          </div>
+
+          {/* Financial Management Capacity */}
+          <div>
+            <h3 className="text-2xl font-bold mb-3">4. Financial Management Capacity Indicator</h3>
+            <div className="bg-white rounded-lg p-6">
+              <p className="text-gray-700 leading-relaxed mb-3">
+                Net Operating Surplus to Total Revenue Ratio (NOSTRR) showed strong volatility, ranging from 1.97 in 2019 to a spike of 14.24 in 2020, before declining to 5.67 in 2023. The sharp increase in 2020 reflects pandemic-driven expenditure restraint and inflows of external fiscal support.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Overall, Batangas LGUs showed highly fluctuating operating surplus performance from 2019–2023, with wide disparities across LGUs. Strengthening local financial planning and spending control is essential to ensure that every community benefits from stable, well-managed public resources.
+              </p>
+            </div>
           </div>
         </section>
 
