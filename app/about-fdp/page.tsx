@@ -4,22 +4,35 @@ import { CheckCircle } from 'lucide-react';
 
 export default function AboutFDP() {
   const requiredDocuments = [
-    'Annual Reports',
-    'Quarterly Reports',
-    'Annual Budget Report',
-    '20% Component of the Internal Revenue Allotment Utilization',
-    'Annual Gender and Development Accomplishment Report',
-    'Bid Results on Civil Works, Goods and Services, and Consulting Services',
-    'Annual Procurement Plan or Procurement List',
-    'Local Disaster Risk Reduction and Management Fund Utilization (LDRRMF)',
-    'Statement of Debt Service',
-    'Quarterly Statement of Cash Flow',
-    'Statement of Receipts and Expenditures',
-    'Report of Special Education Fund Utilization',
-    'Supplemental Procurement Plan',
-    'Trust Fund Utilization',
-    'Human Resource Complement',
-    'Unliquidated Cash Advances',
+    {
+      category: 'Annual Reports',
+      items: [
+        'Annual Budget Report',
+        '20% Component of the Internal Revenue Allotment Utilization',
+        'Annual Gender and Development Accomplishment Report',
+        'Bid Results on Civil Works, Goods and Services, and Consulting Services',
+        'Annual Procurement Plan or Procurement List',
+        'Local Disaster Risk Reduction and Management Fund Utilization (LDRRMF)',
+        'Statement of Debt Service',
+        'Report of Special Education Fund Utilization',
+        'Supplemental Procurement Plan',
+        'Trust Fund Utilization',
+      ],
+    },
+    {
+      category: 'Quarterly Reports',
+      items: [
+        'Quarterly Statement of Cash Flow',
+        'Statement of Receipts and Expenditures',
+      ],
+    },
+    {
+      category: 'Other Required Documents',
+      items: [
+        'Human Resource Complement',
+        'Unliquidated Cash Advances',
+      ],
+    },
   ];
 
   const legalBasis = [
@@ -96,11 +109,18 @@ export default function AboutFDP() {
           <p className="text-gray-600 mb-6">
             LGUs must regularly disclose the following documents to ensure transparency:
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {requiredDocuments.map((doc, index) => (
-              <div key={index} className="flex items-start gap-4 bg-white p-4 rounded-lg border border-gray-200">
-                <CheckCircle className="text-green-600 flex-shrink-0 mt-1" size={20} />
-                <span className="text-gray-700">{doc}</span>
+          <div className="space-y-8">
+            {requiredDocuments.map((section, idx) => (
+              <div key={idx}>
+                <h3 className="text-2xl font-bold text-green-700 mb-4">{section.category}</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {section.items.map((doc, index) => (
+                    <div key={index} className="flex items-start gap-4 bg-white p-4 rounded-lg border border-gray-200">
+                      <CheckCircle className="text-green-600 flex-shrink-0 mt-1" size={20} />
+                      <span className="text-gray-700">{doc}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
