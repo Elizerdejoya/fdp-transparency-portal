@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -21,13 +22,16 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="bg-blue-600 text-white px-3 py-1 rounded-lg font-bold text-lg">
-            FDP
-          </div>
-          <div className="hidden sm:block">
-            <h1 className="font-bold text-gray-800">Transparency Portal</h1>
-            <p className="text-xs text-gray-600">Batangas LGUs 2019–2023</p>
+        <Link href="/" className="flex items-center gap-4 w-full">
+          <div className="w-full">
+            <Image
+              src="/images/homescreen.png"
+              alt="FDP Transparency Portal"
+              width={1200}
+              height={200}
+              className="w-full h-auto object-contain"
+              priority
+            />
           </div>
         </Link>
 
