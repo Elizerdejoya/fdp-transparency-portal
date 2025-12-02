@@ -118,6 +118,36 @@ git push
 
 ## Troubleshooting
 
+## Vercel (Recommended for Next.js runtime)
+
+Vercel auto-detects Next.js projects and is recommended if you want full Next.js runtime support (SSR, image optimization, API routes).
+
+- Install Command: `npm install` (or leave blank to use Vercel defaults). Use `npm ci` only if a `package-lock.json` exists and you run it from the project root.
+- Build Command: `npm run build`
+- Output Directory: leave blank for runtime deployments.
+
+Notes:
+- If `npm ci` fails with an error about a missing lockfile, you likely ran it outside the project directory or the lockfile is missing. Run `npm install` in the project folder to generate `package-lock.json`, then use `npm ci` for reproducible installs.
+
+Local commands (PowerShell):
+
+```powershell
+cd C:\Users\intia\Documents\bsba\fdp-transparency-portal
+npm install
+npm run build
+```
+
+## GitHub Actions and static export (optional)
+
+- The included workflow (`.github/workflows/deploy.yml`) publishes the `out/` folder to GitHub Pages when commits are pushed to `main`.
+- If you want to continue using GitHub Pages:
+   - Re-enable static export (`output: "export"`) in `next.config.ts` or use a build script that generates `out/`.
+   - Make sure the workflow triggers on the branch you use (`main` vs `master`). Edit the workflow to include `master` if you prefer that branch.
+
+Recommendation:
+- For the richest Next.js feature set, use Vercel runtime (no static export).
+- For an uncomplicated static site, enable static export and publish `out/` to GitHub Pages.
+
 ### Issue: "GitHub Actions workflow not running"
 
 **Solution**:
