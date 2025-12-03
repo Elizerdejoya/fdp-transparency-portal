@@ -44,8 +44,8 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-          <p>&copy; 2024 FDP Transparency Portal. All rights reserved.</p>
-          <p>Research Study: FDP & Financial Performance in Batangas LGUs (2019–2023)</p>
+          <p>&copy; 2025 FDP Transparency Portal. All rights reserved.</p>
+          <p>Assessing the Effects of Full Disclosure Policy Compliance on the Financial Performance of Local Government Units (LGUs) in Batangas</p>
         </div>
       </div>
     </footer>

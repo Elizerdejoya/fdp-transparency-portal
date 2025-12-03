@@ -3,48 +3,21 @@
 import { Download, FileText, Link as LinkIcon } from 'lucide-react';
 
 export default function Resources() {
+  // Two approved downloads (hosted on Google Drive) — buttons point to direct-download URLs
   const resources = [
     {
-      title: 'Full Study Report (2019-2023)',
-      description: 'Comprehensive research document analyzing FDP compliance and financial performance across Batangas LGUs',
-      icon: <FileText size={24} className="text-blue-600" />,
+      title: "Assessing the Effects of Full Disclosure Policy (FDP) Compliance on the Financial Performance of Local Government Units (LGUs) in Batangas",
+      description: 'Full research report (PDF)',
+      downloadUrl: 'https://drive.google.com/uc?export=download&id=18--OY9Go0kHJoGVWgYrt08_gWvzpVOyf',
       format: 'PDF',
       size: '12 MB',
     },
     {
-      title: 'FDP Compliance Checklist',
-      description: 'Quick reference guide for LGU officials on required documents and posting timelines',
-      icon: <FileText size={24} className="text-green-600" />,
+      title: "Proposed IEC Material on the Effects of FDP Compliance to Batangas LGUs' Financial Performance",
+      description: 'Proposed IEC material (PDF)',
+      downloadUrl: 'https://drive.google.com/uc?export=download&id=1ZRoVg6WDEPRLCr1GJf6-MLQNzMVPw6GO',
       format: 'PDF',
-      size: '2 MB',
-    },
-    {
-      title: 'Data Analysis Spreadsheet',
-      description: 'Excel workbook with detailed financial metrics, trends, and performance indicators by LGU',
-      icon: <FileText size={24} className="text-purple-600" />,
-      format: 'XLSX',
-      size: '5 MB',
-    },
-    {
-      title: 'Best Practices Manual',
-      description: 'Detailed guide on implementing best practices from high-performing LGUs',
-      icon: <FileText size={24} className="text-orange-600" />,
-      format: 'PDF',
-      size: '8 MB',
-    },
-    {
-      title: 'Training Materials Package',
-      description: 'Presentation slides and training guides for staff capacity-building',
-      icon: <FileText size={24} className="text-red-600" />,
-      format: 'ZIP',
-      size: '25 MB',
-    },
-    {
-      title: 'Digital Tools Implementation Guide',
-      description: 'Step-by-step instructions for implementing digital FDP posting systems',
-      icon: <FileText size={24} className="text-indigo-600" />,
-      format: 'PDF',
-      size: '6 MB',
+      size: '3 MB',
     },
   ];
 
@@ -97,7 +70,7 @@ export default function Resources() {
               <div key={index} className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="bg-gray-100 rounded-lg p-3 flex-shrink-0">
-                    {resource.icon}
+                    <FileText size={24} className="text-blue-600" />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-bold text-lg text-gray-800">{resource.title}</h3>
@@ -110,45 +83,22 @@ export default function Resources() {
                     <span>📄 {resource.format}</span>
                     <span>💾 {resource.size}</span>
                   </div>
-                  <button className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors flex items-center gap-2">
+                  <a
+                    href={resource.downloadUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors flex items-center gap-2"
+                  >
                     <Download size={16} />
                     Download
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* External Resources */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-gray-800">External Resources</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {externalResources.map((resource, index) => (
-              <div key={index} className="bg-white border-2 border-blue-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="bg-blue-100 rounded-lg p-3 flex-shrink-0">
-                    <LinkIcon size={24} className="text-blue-600" />
-                  </div>
-                  <div className="flex-1">
-                    <span className="text-sm text-blue-600 font-semibold">{resource.category}</span>
-                    <h3 className="font-bold text-lg text-gray-800">{resource.title}</h3>
-                    <p className="text-gray-600 text-sm">{resource.description}</p>
-                  </div>
-                </div>
-
-                <a
-                  href={resource.url}
-                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2 mt-4"
-                >
-                  <LinkIcon size={16} />
-                  Visit Resource
-                </a>
-              </div>
-            ))}
-          </div>
-        </section>
+        {/* External resources removed per request */}
 
         {/* FAQ Section */}
         <section>

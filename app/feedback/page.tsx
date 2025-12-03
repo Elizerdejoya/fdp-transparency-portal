@@ -36,7 +36,7 @@ export default function Feedback() {
 
   const researchers = [
     {
-      name: 'Ashley Gwyneth Pananana',
+      name: 'Ashley Gwyneth Panapanaan',
       email: 'panapanaanashleygwyneth@gmail.com',
       role: 'Research Lead',
     },
