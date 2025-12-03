@@ -1,8 +1,23 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
+import { X } from 'lucide-react';
 
 export default function StudyFindings() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState<{ src: string; alt: string } | null>(null);
+
+  const openLightbox = (src: string, alt: string) => {
+    setLightboxImage({ src, alt });
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    setLightboxImage(null);
+  };
+
   return (
     <div>
       {/* Hero Section */}
@@ -25,7 +40,7 @@ export default function StudyFindings() {
               Indicators Visualized: Locally Sourced Revenue per Capita (LSRPC) and Total Expenditure per Capita (TEPC)
             </p>
             <p className="text-gray-700 text-sm md:text-base mt-2">
-              (Click images to open full-size in a new tab)
+              (Click images to view in fullscreen)
             </p>
           </div>
         </section>
@@ -34,9 +49,13 @@ export default function StudyFindings() {
         <section className="mb-6">
           <h3 className="text-xl md:text-2xl font-semibold mb-3">Locally Sourced Revenue per Capita (LSRPC) and Total Expenditure per Capita (TEPC)</h3>
           <div className="bg-white rounded-lg shadow p-4 md:p-6 flex justify-center">
-            <a href="/images/lsrpc.png" target="_blank" rel="noreferrer" className="w-full max-w-lg">
+            <button
+              onClick={() => openLightbox('/images/lsrpc.png', 'LSRPC and TEPC')}
+              className="w-full max-w-lg cursor-pointer hover:opacity-90 transition-opacity"
+              aria-label="View LSRPC and TEPC chart in fullscreen"
+            >
               <Image src="/images/lsrpc.png" alt="LSRPC and TEPC" width={700} height={260} className="w-full h-auto object-contain" />
-            </a>
+            </button>
           </div>
 
           <div className="mt-4 bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
@@ -68,9 +87,13 @@ export default function StudyFindings() {
           </div>
 
           <div className="mt-5 flex justify-center">
-            <a href="/images/fdp.png" target="_blank" rel="noreferrer" className="w-full max-w-md">
+            <button
+              onClick={() => openLightbox('/images/fdp.png', 'FDP compliance trend')}
+              className="w-full max-w-md cursor-pointer hover:opacity-90 transition-opacity"
+              aria-label="View FDP compliance chart in fullscreen"
+            >
               <Image src="/images/fdp.png" alt="FDP compliance trend" width={640} height={220} className="w-full h-auto object-contain" />
-            </a>
+            </button>
           </div>
 
           <div className="mt-4 bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
@@ -90,9 +113,13 @@ export default function StudyFindings() {
           <div className="mb-4">
             <h4 className="font-bold text-green-700 mb-2">1. Revenue Indicators</h4>
             <div className="bg-white rounded-lg shadow p-4 flex justify-center mb-3">
-              <a href="/images/revenue.png" target="_blank" rel="noreferrer" className="w-full max-w-md">
+              <button
+                onClick={() => openLightbox('/images/revenue.png', 'Revenue indicators')}
+                className="w-full max-w-md cursor-pointer hover:opacity-90 transition-opacity"
+                aria-label="View revenue indicators chart in fullscreen"
+              >
                 <Image src="/images/revenue.png" alt="Revenue indicators" width={640} height={220} className="w-full h-auto object-contain" />
-              </a>
+              </button>
             </div>
 
             <ol className="list-decimal list-inside text-gray-700 space-y-2">
@@ -127,9 +154,13 @@ export default function StudyFindings() {
           <div className="mb-4">
             <h4 className="font-bold text-green-700 mb-2">2. Expenditure Indicators</h4>
             <div className="bg-white rounded-lg shadow p-4 flex justify-center mb-3">
-              <a href="/images/dser.png" target="_blank" rel="noreferrer" className="w-full max-w-md">
+              <button
+                onClick={() => openLightbox('/images/dser.png', 'Expenditure indicators')}
+                className="w-full max-w-md cursor-pointer hover:opacity-90 transition-opacity"
+                aria-label="View expenditure indicators chart in fullscreen"
+              >
                 <Image src="/images/dser.png" alt="Expenditure indicators" width={640} height={220} className="w-full h-auto object-contain" />
-              </a>
+              </button>
             </div>
 
             <p className="text-gray-700 mb-2">
@@ -172,9 +203,13 @@ export default function StudyFindings() {
           <div className="mb-4">
             <h4 className="font-bold text-green-700 mb-2">3. Debt and Investment Capacity Indicators</h4>
             <div className="bg-white rounded-lg shadow p-4 flex justify-center mb-3">
-              <a href="/images/debt.png" target="_blank" rel="noreferrer" className="w-full max-w-md">
+              <button
+                onClick={() => openLightbox('/images/debt.png', 'Debt and investment capacity')}
+                className="w-full max-w-md cursor-pointer hover:opacity-90 transition-opacity"
+                aria-label="View debt and investment capacity chart in fullscreen"
+              >
                 <Image src="/images/debt.png" alt="Debt and investment capacity" width={640} height={220} className="w-full h-auto object-contain" />
-              </a>
+              </button>
             </div>
 
             <p className="text-gray-700 mb-2">
@@ -211,9 +246,13 @@ export default function StudyFindings() {
           <div className="mb-4">
             <h4 className="font-bold text-green-700 mb-2">4. Financial Management Capacity Indicator</h4>
             <div className="bg-white rounded-lg shadow p-4 flex justify-center mb-3">
-              <a href="/images/financial.png" target="_blank" rel="noreferrer" className="w-full max-w-md">
+              <button
+                onClick={() => openLightbox('/images/financial.png', 'Financial management capacity')}
+                className="w-full max-w-md cursor-pointer hover:opacity-90 transition-opacity"
+                aria-label="View financial management capacity chart in fullscreen"
+              >
                 <Image src="/images/financial.png" alt="Financial management capacity" width={640} height={220} className="w-full h-auto object-contain" />
-              </a>
+              </button>
             </div>
 
             <p className="text-gray-700 mb-2">
@@ -260,6 +299,35 @@ export default function StudyFindings() {
           </div>
         </section>
       </div>
+
+      {/* Lightbox Modal */}
+      {lightboxOpen && lightboxImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4"
+          onClick={closeLightbox}
+        >
+          <div
+            className="relative bg-white rounded-lg max-w-4xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeLightbox}
+              className="absolute top-4 right-4 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full z-10 transition-colors"
+              aria-label="Close lightbox"
+            >
+              <X size={24} />
+            </button>
+            <Image
+              src={lightboxImage.src}
+              alt={lightboxImage.alt}
+              width={1200}
+              height={600}
+              className="w-full h-auto max-h-[80vh]"
+              priority
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
