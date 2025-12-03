@@ -307,16 +307,9 @@ export default function StudyFindings() {
           onClick={closeLightbox}
         >
           <div
-            className="relative bg-white rounded-lg max-w-4xl w-full"
+            className="bg-white rounded-lg max-w-4xl w-full"
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              onClick={closeLightbox}
-              className="absolute top-4 right-4 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full z-10 transition-colors"
-              aria-label="Close lightbox"
-            >
-              <X size={24} />
-            </button>
             <Image
               src={lightboxImage.src}
               alt={lightboxImage.alt}
