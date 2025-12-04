@@ -6,9 +6,9 @@ export default function Resources() {
   // Two approved downloads (hosted on Google Drive) — buttons point to direct-download URLs
   const resources = [
     {
-      title: "Assessing the Effects of Full Disclosure Policy (FDP) Compliance on the Financial Performance of Local Government Units (LGUs) in Batangas",
+      title: "Assessing the Effects of Full Disclosure Policy Compliance on the Financial Performance of Local Government Units (LGUs) in Batangas",
       description: 'Full research report (PDF)',
-      downloadUrl: 'https://drive.google.com/uc?export=download&id=18--OY9Go0kHJoGVWgYrt08_gWvzpVOyf',
+      downloadUrl: 'https://drive.google.com/file/d/1oEHrvE4Gsi0oMg0WELM-2l5goaqkGNs2/view?usp=sharing',
       format: 'PDF',
       size: '12 MB',
     },
@@ -99,70 +99,6 @@ export default function Resources() {
         </section>
 
         {/* External resources removed per request */}
-
-        {/* FAQ Section */}
-        <section>
-          <h2 className="text-3xl font-bold mb-8 text-gray-800">Frequently Asked Questions</h2>
-
-          <div className="space-y-4">
-            <details className="bg-white border-2 border-gray-200 rounded-lg p-6 cursor-pointer group">
-              <summary className="font-bold text-lg text-gray-800 flex items-center justify-between">
-                What documents are covered in the full study report?
-                <span className="group-open:rotate-180 transition-transform">▼</span>
-              </summary>
-              <p className="text-gray-600 mt-4 leading-relaxed">
-                The full study report includes comprehensive analysis of FDP compliance rates, financial performance
-                indicators (LSRPC, TEPC, DSR, SER, EER), trends across all Batangas LGUs for 2019-2023, and
-                comparative analysis between cities and municipalities.
-              </p>
-            </details>
-
-            <details className="bg-white border-2 border-gray-200 rounded-lg p-6 cursor-pointer group">
-              <summary className="font-bold text-lg text-gray-800 flex items-center justify-between">
-                How can I use the compliance checklist?
-                <span className="group-open:rotate-180 transition-transform">▼</span>
-              </summary>
-              <p className="text-gray-600 mt-4 leading-relaxed">
-                The compliance checklist provides a quick reference for tracking required document submissions,
-                deadlines, and compliance status. It can be used monthly or quarterly to ensure your LGU stays on track
-                with FDP requirements.
-              </p>
-            </details>
-
-            <details className="bg-white border-2 border-gray-200 rounded-lg p-6 cursor-pointer group">
-              <summary className="font-bold text-lg text-gray-800 flex items-center justify-between">
-                Where can I access the FDPP portal to submit documents?
-                <span className="group-open:rotate-180 transition-transform">▼</span>
-              </summary>
-              <p className="text-gray-600 mt-4 leading-relaxed">
-                The FDP Portal (FDPP) is accessible through the official government platform. Contact your LGU's
-                finance office for login credentials and technical support.
-              </p>
-            </details>
-
-            <details className="bg-white border-2 border-gray-200 rounded-lg p-6 cursor-pointer group">
-              <summary className="font-bold text-lg text-gray-800 flex items-center justify-between">
-                Can I modify or redistribute these resources?
-                <span className="group-open:rotate-180 transition-transform">▼</span>
-              </summary>
-              <p className="text-gray-600 mt-4 leading-relaxed">
-                These resources are provided for educational and compliance purposes. Redistribution is allowed with
-                proper attribution to the original research team. Modifications for LGU-specific use are encouraged.
-              </p>
-            </details>
-
-            <details className="bg-white border-2 border-gray-200 rounded-lg p-6 cursor-pointer group">
-              <summary className="font-bold text-lg text-gray-800 flex items-center justify-between">
-                How often are these resources updated?
-                <span className="group-open:rotate-180 transition-transform">▼</span>
-              </summary>
-              <p className="text-gray-600 mt-4 leading-relaxed">
-                Resources are updated annually to reflect new policy changes, updated DILG guidelines, and emerging
-                best practices. Subscribe to our mailing list for update notifications.
-              </p>
-            </details>
-          </div>
-        </section>
       </div>
     </div>
   );

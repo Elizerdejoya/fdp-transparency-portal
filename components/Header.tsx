@@ -27,7 +27,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-4">
           <div className="h-16 w-auto">
             <Image
-              src="/images/homescreen.png"
+              src="/images/logo.png"
               alt="FDP Transparency Portal"
               width={200}
               height={64}

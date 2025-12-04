@@ -36,19 +36,19 @@ export default function Feedback() {
 
   const researchers = [
     {
+      name: 'Anna Kathrina Landicho',
+      email: 'landichoannakathrina@gmail.com',
+      role: 'Researcher',
+    },
+    {
       name: 'Ashley Gwyneth Panapanaan',
       email: 'panapanaanashleygwyneth@gmail.com',
-      role: 'Research Lead',
+      role: 'Researcher',
     },
     {
-      name: 'Noreen Lee Sulabo',
+      name: 'Norelee Sulabo',
       email: 'noreleesulabo09@gmail.com',
-      role: 'Data Analyst',
-    },
-    {
-      name: 'Landichoanna Kathrina',
-      email: 'landichoannakathrina@gmail.com',
-      role: 'Research Coordinator',
+      role: 'Researcher',
     },
   ];
 
